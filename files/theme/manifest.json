@@ -1,0 +1,58 @@
+{
+	"responsive": true,
+    "glyph-icons": true,
+	"enableEditorJS": true,
+    "description": "Dusk gives your website an extra wash of color and sophisticated design elements. The professional palettes and fixed navigation allow your content and brand to remain beautifully positioned on all pages.",
+    "features": [
+        "responsive",
+        "css-buttons",
+        "social-icons",
+        "full-width-header",
+        "navigation-center",
+        "color-palettes"
+    ],
+    "color-support": {
+      "primary": "#07342a",
+      "accent": "#388070"
+    },
+    "color-presets": [
+        {
+          "primary": "#07342a",
+          "accent": "#388070",
+          "variation": "green"
+        },
+        {
+          "primary": "#071b34",
+          "accent": "#385880",
+          "variation": "blue"
+        },
+        {
+          "primary": "#202020",
+          "accent": "#ff8400",
+          "variation": "grey"
+        },
+        {
+          "primary": "#8a0b16",
+          "accent": "#991723",
+          "variation": "red"
+        }
+    ],
+    "custom-options" : [
+        {
+            "name" : "header-overlay",
+            "title": "Header Color",
+            "type" : "toggle",
+            "default" : true,
+            "is-body-class" : true,
+            "is-less-var" : false
+        },
+        {
+            "name" : "header-animation",
+            "title": "Header Fade on Scroll",
+            "type" : "toggle",
+            "default" : true,
+            "is-body-class" : true,
+            "is-less-var" : false
+        }
+    ]
+}
