@@ -10,7 +10,7 @@ parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 for file in os.listdir(parent_dir):  # list files in directory
     if file.endswith(".html"):
         file_path = os.path.join(parent_dir, file)
-        soup = BeautifulSoup(open(file_path, 'r'), "html.parser")
+        soup = BeautifulSoup(open(file_path, 'r', encoding='utf-8'), "html.parser")
 
         # Remove footer-wrap div
         try:
