@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Components - HARDHACK 2018</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1522929168" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Roboto" !important;letter-spacing: 0px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Quicksand" !important;text-transform:  none !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {color:#3f3f3f !important;}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {font-family:"Quicksand" !important;}
+.wsite-footer h2 a, .wsite-footer .paragraph a, .wsite-footer blockquote a {color:#515151 !important;}
+.wsite-menu-default a {font-family:"Roboto" !important;text-transform:  none !important;letter-spacing: 0px !important;}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-family:"Roboto" !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-size:18px !important;}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-size:60px !important;line-height:60px !important;}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {font-size:14px !important;}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {font-size:60px !important;line-height:75px !important;}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+<style>
+.wsite-background {background-image: url("uploads/1/0/1/7/101799490/background-images/91018499.jpeg") !important;background-repeat: no-repeat !important;background-position: 50% 50% !important;background-size: 100% !important;background-color: transparent !important;background: inherit;}
+body.wsite-background {background-attachment: fixed !important;}.wsite-background.wsite-custom-background{ background-size: cover !important}
+</style>
+		<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn2.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"> window._W = window._W || {}; _W.showV2Footer = 0; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"980729199903201996","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"180778030686805773","title":"Competition Details","url":"competition-details.html","target":"","nav_menu":false,"nonclickable":false},{"id":"262351605450613938","title":"Components","url":"components.html","target":"","nav_menu":false,"nonclickable":false},{"id":"558157107831467310","title":"Rules","url":"rules.html","target":"","nav_menu":false,"nonclickable":false},{"id":"766801339173964871","title":"FAQ","url":"faq.html","target":"","nav_menu":false,"nonclickable":false},{"id":"219636233715695400","title":"About Us","url":"about-us.html","target":"","nav_menu":false,"nonclickable":false},{"id":"217416876524736416","title":"Buy Tickets","url":"https:\/\/www.eventbrite.com.au\/e\/hardhack-2018-tickets-44787775442","target":"_blank","nav_menu":false,"nonclickable":false}],
+			"262351605450613938",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		
+	</head>
+	<body class="header-page page-has-banner  wsite-theme-light  wsite-page-components header-overlay-off header-animation-on "><div class="wrapper">
+  	<div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div  class="wsite-section wsite-header-section wsite-section-bg-gradient" style="height: auto;background: #56CCF2;background: linear-gradient(120deg, #56CCF2 0%, #016bad 100%);" >
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner">
+				<div class="wsite-section-elements">
+					<h2 class="wsite-content-title">Components</h2>
+				</div>
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+    </div><!-- end banner-wrap -->
+
+    <div class="dusk-header">
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="logo"><span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">HARDHACK 2018</span>
+	
+	</a>
+
+</span></div>
+          <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg980729199903201996" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg180778030686805773" class="wsite-menu-item-wrap">
+			<a
+						href="competition-details.html"
+				class="wsite-menu-item"
+				>
+				Competition Details
+			</a>
+			
+		</li>
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="components.html"
+				class="wsite-menu-item"
+				>
+				Components
+			</a>
+			
+		</li>
+		<li id="pg558157107831467310" class="wsite-menu-item-wrap">
+			<a
+						href="rules.html"
+				class="wsite-menu-item"
+				>
+				Rules
+			</a>
+			
+		</li>
+		<li id="pg766801339173964871" class="wsite-menu-item-wrap">
+			<a
+						href="faq.html"
+				class="wsite-menu-item"
+				>
+				FAQ
+			</a>
+			
+		</li>
+		<li id="pg219636233715695400" class="wsite-menu-item-wrap">
+			<a
+						href="about-us.html"
+				class="wsite-menu-item"
+				>
+				About Us
+			</a>
+			
+		</li>
+		<li id="pg217416876524736416" class="wsite-menu-item-wrap">
+			<a
+						href="https://www.eventbrite.com.au/e/hardhack-2018-tickets-44787775442"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				Buy Tickets
+			</a>
+			
+		</li>
+</ul>
+</div>
+          <label class="hamburger"><span></span></label>
+        </div><!-- end container -->
+      </div>
+    </div><!-- end header -->
+
+    <div class="main-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-image wsite-section-effect-reveal wsite-background-28 wsite-custom-background" style="height: 460px;background-image: url(&quot;uploads/1/0/1/7/101799490/background-images/1635133617.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50.00% 43.43% ;background-size: 100% ;background-color: transparent ;background-size: cover;" >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title">Limited Components</h2>
+
+<div class="paragraph"><font color="#2a2a2a">The components listed below are limited and to have them available during the competition you will need to put in a request through <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpX5Jg_qbJpzLWr8slLy_3bptBSV1FA0_ShGhCzuvZpp6fxA/viewform?usp=sf_link" target="_blank">this form</a>. You do not need to pay for these components as long as they are returned undamaged. <br />Table below shows the availability of components.&nbsp;<strong>Do not&nbsp;</strong>request a module if "Amount Remaining" is zero.<br />We will not allow teams to request excessive quantities of components; limits apply per team.</font><br /></div>
+
+<div class="wsite-spacer" style="height:18px;"></div>
+
+<div><div id="589149840625196576" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTml1GDsf1_SePodS-P4E0FOkcI8NfDOUveKDBpBcYRiKh0lnULNX3iaGk2-fvHXeJokv65JJv4pJUK/pubhtml?gid=1346548196&amp;single=true&amp;&amp;headers=false" onload="this.width=screen.width;" height="300" style="border: none"></iframe></div>
+
+
+
+</div>
+
+<div style="text-align:left;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="https://docs.google.com/forms/d/e/1FAIpQLSdpX5Jg_qbJpzLWr8slLy_3bptBSV1FA0_ShGhCzuvZpp6fxA/viewform?usp=sf_link" target="_blank">
+<span class="wsite-button-inner">Request Components</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-image wsite-section-effect-reveal wsite-background-29 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title">Standard Components</h2>
+
+<div class="paragraph"><font color="#2a2a2a">All teams are given these components. You can find useful information on how they operate and how to use these components with Arduino libraries below. All teams will receive an&nbsp;<strong>Arduino Uno.&nbsp;</strong>&#8203;</font></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-30 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><strong><font color="#2a2a2a" size="5">37 Sensors in one sensor kit for Arduino</font></strong></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4">Documentation + Photos + Arduino Libraries:</font></font><ul><li><font color="#2a2a2a" size="4"><a href="http://www.instructables.com/id/Arduino-37-in-1-Sensors-Kit-Explained/" target="_blank">http://www.instructables.com/id/Arduino-37-in-1-Sensors-Kit-Explained/</a></font></li></ul><ul><li><font color="#2a2a2a" size="4"><a href="https://tkkrlab.nl/wiki/Arduino_37_sensors" target="_blank">https://tkkrlab.nl/wiki/Arduino_37_sensors</a></font>&#8203;</li></ul></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/637103912_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/637103912.jpg" alt="Picture" style="width:100%;max-width:1024px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-32 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><strong><font color="#2a2a2a" size="5">Soil Resistance Measurer</font></strong></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong> <strong>library</strong>: N/A<br /><strong>Notes</strong>:&nbsp;</font></font><span><font color="#2a2a2a">Analogue read the AO (AnalogOut) pin. DO (DigitalOut) compares vs the potentiometer voltage&nbsp;</font></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/753670208_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/753670208.jpg?1522805098" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-33 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>IMU (MPU-6050) - </strong></font><strong><font size="5">Accelerometer + Gyro</font></strong><font color="#2a2a2a" size="5"></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong> <strong>library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://playground.arduino.cc/Main/MPU-6050" target="_blank">https://playground.arduino.cc/Main/MPU-6050</a></span><br /><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font><u>This is 3.3v component. See Level shifting tutorial.</u> Needs 10k pullup resistors on the I2C lines. Read the page very carefully.</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/942344178_orig.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/942344178_orig.jpeg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-34 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>Capacitive Touch Switch</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong> <strong>library</strong>: N/A</font></font><br /><font color="#2a2a2a"><font size="4"><strong>Notes</strong>: N/A</font></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/900316118.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/900316118.jpeg?1522807986" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-35 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>SD Card Reader</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong> <strong>library</strong>: Coming soon</font></font><br /><font color="#2a2a2a"><font size="4"><strong>Notes</strong>: Coming soon</font></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/981042863_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/981042863_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-36 wsite-custom-background"  >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>Water Sensor</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong> <strong>library</strong>: Coming soon</font></font><br /><font color="#2a2a2a"><font size="4"><strong>Notes</strong>: Coming soon</font></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/791389304.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/791389304.jpeg?1522808473" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-38 wsite-custom-background" style="background-color: #1c1c1c;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
+        <div class="container">
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:40.986717267552%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:left;"><font color="#d5d5d5"><strong><font size="6">Purchase your ticket</font></strong></font></h2>
+
+<div style="text-align:left;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="https://www.eventbrite.com.au/e/hardhack-2018-tickets-44787775442" target="_blank">
+<span class="wsite-button-inner">Purchase Now</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+<div class="paragraph" style="text-align:left;"><font style="color:rgb(255, 255, 255)">Club Member Ticket&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $20</font><br /><span style="color:rgb(255, 255, 255)">Non-Club Member Ticket&nbsp; &nbsp; $25</span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:59.013282732448%; padding:0 15px;">
+					
+						
+
+<div class="wsite-spacer" style="height:28px;"></div>
+
+<div class="paragraph" style="text-align:left;"><br /><font color="#a1a1a1">&#8203;Limited spots available!<br />Teams must have 4 - 6 team members.<br /><a href="rules.html">&#8203;Read the rules</a> before purchasing to avoid complications!</font><br /><br /></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
+      </div>
+
+	</div>
+</div>
+
+</div>
+
+    </div><!-- end main-wrap -->
+
+    
+
+  <div class="nav mobile-nav"><ul class="wsite-menu-default">
+		<li id="pg980729199903201996" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg180778030686805773" class="wsite-menu-item-wrap">
+			<a
+						href="competition-details.html"
+				class="wsite-menu-item"
+				>
+				Competition Details
+			</a>
+			
+		</li>
+		<li id="active" class="wsite-menu-item-wrap">
+			<a
+						href="components.html"
+				class="wsite-menu-item"
+				>
+				Components
+			</a>
+			
+		</li>
+		<li id="pg558157107831467310" class="wsite-menu-item-wrap">
+			<a
+						href="rules.html"
+				class="wsite-menu-item"
+				>
+				Rules
+			</a>
+			
+		</li>
+		<li id="pg766801339173964871" class="wsite-menu-item-wrap">
+			<a
+						href="faq.html"
+				class="wsite-menu-item"
+				>
+				FAQ
+			</a>
+			
+		</li>
+		<li id="pg219636233715695400" class="wsite-menu-item-wrap">
+			<a
+						href="about-us.html"
+				class="wsite-menu-item"
+				>
+				About Us
+			</a>
+			
+		</li>
+		<li id="pg217416876524736416" class="wsite-menu-item-wrap">
+			<a
+						href="https://www.eventbrite.com.au/e/hardhack-2018-tickets-44787775442"
+					target="_blank"
+				class="wsite-menu-item"
+				>
+				Buy Tickets
+			</a>
+			
+		</li>
+</ul>
+</div>
+
+  <script type="text/javascript" src="files/theme/plugins.js"></script>
+  <script type="text/javascript" src="files/theme/custom.js"></script>
+
+		
+	</body>
+</html>
