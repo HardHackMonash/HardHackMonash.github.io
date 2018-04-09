@@ -26,6 +26,12 @@ for file in os.listdir(parent_dir):  # list files in directory
         except AttributeError:
             pass
 
+        # Change the link for HardHack 2018 title
+        try:
+            soup.find('span', {'id': 'wsite-title'}).parent['href'] = '/'
+        except AttributeError:
+            pass
+
         # Replace /uploads
         soup_string = str(soup).replace('/uploads', 'uploads')
         soup = BeautifulSoup(soup_string, "html.parser")
