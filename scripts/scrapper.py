@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import os
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+google_analytics = BeautifulSoup("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-117176866-1'></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-117176866-1');</script>", "html.parser")
 
 for file in os.listdir(parent_dir):  # list files in directory
     if file.endswith(".html"):
@@ -15,6 +16,13 @@ for file in os.listdir(parent_dir):  # list files in directory
         # Remove footer-wrap div
         try:
             soup.find('div', {'class': 'footer-wrap'}).decompose()
+        except AttributeError:
+            pass
+
+        # Add Google Analytics to the pages
+        try:
+            if str(soup).find('UA-117176866-1') == -1:
+                soup.find('body').append(google_analytics)
         except AttributeError:
             pass
 
