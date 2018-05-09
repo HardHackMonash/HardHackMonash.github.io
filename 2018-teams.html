@@ -9,7 +9,7 @@
   <link href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" id="wsite-base-style" rel="stylesheet" type="text/css"/>
   <link href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" rel="stylesheet" type="text/css"/>
   <link href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" rel="stylesheet" type="text/css"/>
-  <link href="files/main_style.css?1525428689" rel="stylesheet" title="wsite-theme-css" type="text/css"/>
+  <link href="files/main_style.css?1525831192" rel="stylesheet" title="wsite-theme-css" type="text/css"/>
   <link href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
   <link href="http://fonts.googleapis.com/css?family=Quicksand:400,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
@@ -182,7 +182,7 @@ var STYLE_PREFIX = 'wsite';
         <div class="container">
          <div class="wsite-section-elements">
           <h2 class="wsite-content-title">
-           2018 Teams and Projects
+           2018 Teams &amp; Projects
           </h2>
           <div class="paragraph">
            Event photos can be found
@@ -606,10 +606,50 @@ jQuery(document).ready(init);
                 </td>
                 <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
                  <div class="paragraph">
-                  <font color="#0c0c0c" size="3">
-                   A system of integrated sensors to monitor the temperature, humidity and moisture of an enclosed farming environment, a system to water the plant when detected moisture becomes too low, and an SMS alert system to notify a user of any problems. LEDs provide light for a customisable portion of the day. Uses a resistive moisture sensor, a temp/humidity sensor and a water level sensor. These are monitored and controlled by an arduino, while a raspberry pi and associated APIs are used to send texts.
+                  <font color="#000000" size="3">
+                   With the world's population continually rising, sustainable food production is an issue that has been rife in recent times, particularly in the agricultural sector. The Technologically Enhanced Remote Relay Actuated Real-time Irrigation Unit Monitor (TERRARIUM) allows for high-density, indoor plantations, aiming to alleviate the stress on the environment by way of reduced surface land usage, greater crop yield and thus reduced crop and resource waste.
+                   <br/>
+                   <br/>
                   </font>
+                  <br/>
                  </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div>
+          </div>
+          <div class="wsite-spacer" style="height:19px;">
+          </div>
+          <div class="paragraph">
+           <font color="#000000" size="3">
+            The TERRARIUM makes use of several components:
+            <br/>
+            - An array of LEDs can be set to a timer to mimic outdoor daylight hours;
+            <br>
+             - Soil resistivity sensors measure the moisture present in the soil – where it is too dry, the device will automatically feed water into the system, stopping when the moisture level is adequate. This reduces water usage to the only necessary amount;
+             <br/>
+             - A water level monitor is fitted to an external tank, alerting the user through text message when water reserves need to be replenished; and
+             <br/>
+             - Temperature and humidity are also monitored, with the user being notified when these conditions do not align with the plant’s needs.
+             <br/>
+             <br/>
+             These conditional parameters can be modified by the user in an external web app, where requirements can be specified based on plant species. Through this, they are also able to keep track of the overall crop health. Aside from provided electronics, the TERRARIUM can be produced entirely from recycled materials and can be modified for further applications in research, live vegetation transport, single units for in-home use by individuals without access to garden areas and even remote monitoring in space exploration where resources are limited.
+            </br>
+           </font>
+          </div>
+          <div>
+           <div class="wsite-multicol">
+            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+             <table class="wsite-multicol-table">
+              <tbody class="wsite-multicol-tbody">
+               <tr class="wsite-multicol-tr">
+                <td class="wsite-multicol-col" style="width:49.999999999999%; padding:0 15px;">
+                 <div class="wsite-spacer" style="height:50px;">
+                 </div>
+                </td>
+                <td class="wsite-multicol-col" style="width:49.999999999999%; padding:0 15px;">
                  <div>
                   <div style="height: 20px; overflow: hidden; width: 100%;">
                   </div>
@@ -888,7 +928,7 @@ jQuery(document).ready(init);
                 <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
                  <div class="paragraph" style="text-align:left;">
                   <span>
-                   <font color="#000000">
+                   <font color="#000000" size="3">
                     The goal of the implementation is to signal to commuters the relative capacity of each train carriage before the train arrives. Using computer vision, a raspberry pi will acquire information from a camera which is to be placed in each carriage which will detect the number of people in each carriage. This data is processed on a server online and using a facial recognition algorithm will determine the number of people in a given carriage and send this information to the train platform. Strips of LEDs placed on the edge of the platform aligning with each carriage of the train. These LEDs will light up in one of three different colours in accordance to each capacity of a given carriage.
                    </font>
                   </span>
