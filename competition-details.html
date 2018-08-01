@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+  <script src="/gdpr/gdprscript.js?buildTime=1234&amp;hasRemindMe=true&amp;stealth=false">
+  </script>
   <title>
    Competition Details - HARDHACK 2018
   </title>
@@ -9,7 +11,7 @@
   <link href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" id="wsite-base-style" rel="stylesheet" type="text/css"/>
   <link href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" rel="stylesheet" type="text/css"/>
   <link href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" rel="stylesheet" type="text/css"/>
-  <link href="files/main_style.css?1525831192" rel="stylesheet" title="wsite-theme-css" type="text/css"/>
+  <link href="files/main_style.css?1533094151" rel="stylesheet" title="wsite-theme-css" type="text/css"/>
   <link href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,700,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
   <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
   <link href="http://fonts.googleapis.com/css?family=Quicksand:400,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
@@ -78,6 +80,33 @@ var STYLE_PREFIX = 'wsite';
   <script src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&amp;" type="text/javascript">
   </script>
   <script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234">
+  </script>
+  <script type="text/javascript">
+   function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+  </script>
+  <script type="text/javascript">
+   _W = _W || {}; _W.securePrefix='UNSET';
+  </script>
+  <script>
+   _W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.storeCountry = "AU";
+			_W.storeCurrency = "AUD";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "240750007582293700";
+			com_userID = "101799490";
   </script>
   <script type="text/javascript">
    _W.configDomain = "www.weebly.com";
@@ -645,6 +674,10 @@ var STYLE_PREFIX = 'wsite';
   <script src="files/theme/plugins.js" type="text/javascript">
   </script>
   <script src="files/theme/custom.js" type="text/javascript">
+  </script>
+  <div id="customer-accounts-app">
+  </div>
+  <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234">
   </script>
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-117176866-1">
   </script>
