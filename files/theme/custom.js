@@ -1,31 +1,5 @@
 jQuery(function($) {
 
-	// Fixed nav
-	$.fn.checkElementPositioning = function($el, $offsetHeightEl, scrollClass) {
-    if (!this.length) {
-      return;
-    }
-
-		if(((this.offset().top - $(window).scrollTop()) <= $offsetHeightEl.outerHeight()) && !$el.hasClass(scrollClass)) {
-			$el.addClass(scrollClass);
-		} else if(((this.offset().top - $(window).scrollTop()) >= $offsetHeightEl.outerHeight()) && $el.hasClass(scrollClass)) {
-			$el.removeClass(scrollClass);
-		}
-	}
-
-  // Fade banner
-  $.fn.fadeBanner = function($el, scrollClass, offset) {
-    if (!this.length) {
-        return;
-    }
-
-    if((this.offset().top < ($(window).scrollTop() + offset)) && !$el.hasClass(scrollClass)) {
-      $el.addClass(scrollClass);
-    } else if((this.offset().top >= ($(window).scrollTop() + offset)) && $el.hasClass(scrollClass)) {
-      $el.removeClass(scrollClass);
-    }
-  }
-
   // Mobile sidebars
   $.fn.expandableSidebar = function(expandedClass) {
     var $me = this;
@@ -50,6 +24,8 @@ jQuery(function($) {
         counter++;
       }
     }, duration);
+
+    if (!condition) action();
   }
 
   // Check if element exists
@@ -57,52 +33,76 @@ jQuery(function($) {
     return $(selector).length;
   }
 
-  var duskController = {
+  $.fn.hideDropdowns = function(dropdownClass) {
+    this
+      .removeClass(dropdownClass)
+      .find('.wsite-menu-wrap')
+      .revealer('hide')
+      .find('.' + dropdownClass)
+      .removeClass(dropdownClass);
 
+    return this;
+  }
+
+  var edisonController = {
     init: function(opts) {
       var base = this;
 
-      // Check content positioning
-      if ($('.desktop-nav .wsite-menu-default').text().length > 1) {
-        $('.main-wrap').checkElementPositioning($('body.page-has-banner'), $('.dusk-header'), 'affix');
-      }
-
-      // Add classes to elements
       base._addClasses();
+      base._headerSetup();
 
-      setTimeout(function(){
-        base._checkCartItems();
-        base._attachEvents();
-      }, 1000);
+      $(window).on('resize', function() {
+        base._headerSetup();
+      });
+
+      base._navSetup();
+      base._searchBox();
+      base._miniCartSetup();
+      base._productSetup();
+      base._attachEvents();
+    },
+
+    _breakpoints: {
+      small: 768,
+    },
+
+    _utils: {
+      onEscKey: function(callback) {
+        $(document).on('keyup', function(event) {
+          if (event.keyCode === 27) callback();
+        });
+      },
+      onScrollDirection: function(Direction) {
+        var previousScrollTop = 0,
+            deltaThreshold = 5;
+
+        $(window).scroll(function() {
+          var currentScrollTop = $(this).scrollTop();
+
+          //return if scroll hasn't met delta threshold
+          if (Math.abs(previousScrollTop - currentScrollTop) <= deltaThreshold) {
+            return;
+          }
+
+          //direction conditions
+          if (currentScrollTop > previousScrollTop){
+            Direction.down(currentScrollTop);
+          } else {
+            Direction.up(currentScrollTop);
+          }
+
+          previousScrollTop = currentScrollTop;
+        });
+      },
     },
 
     _addClasses: function() {
       var base = this;
 
-      // Add class to nav items with subnav
-      $('.wsite-menu-default').find('li.wsite-menu-item-wrap').each(function(){
-        var $me = $(this);
+      $(document.body).addClass('reveal-content');
 
-        if($me.children('.wsite-menu-wrap').length > 0) {
-
-          $me.addClass('has-submenu');
-          $('<span class="icon-caret"></span>').insertAfter($me.children('a.wsite-menu-item'));
-        }
-      });
-
-      // Add class to subnav items with subnav
-      $('.wsite-menu').find('li.wsite-menu-subitem-wrap').each(function(){
-        var $me = $(this);
-
-        if($me.children('.wsite-menu-wrap').length > 0) {
-
-          $me.addClass('has-submenu');
-          $('<span class="icon-caret"></span>').insertAfter($me.children('a.wsite-menu-subitem'));
-        }
-      });
-
-        // Keep subnav open if submenu item is active
-        $('li.wsite-menu-subitem-wrap.wsite-nav-current').parents('.wsite-menu-wrap').addClass('open');
+      // Keep subnav open if submenu item is active
+      $('li.wsite-menu-subitem-wrap.wsite-nav-current').parents('.wsite-menu-wrap').addClass('open');
 
       // Add placeholder text to inputs
       $('.wsite-form-sublabel').each(function(){
@@ -118,73 +118,305 @@ jQuery(function($) {
       });
     },
 
-    _checkCartItems: function() {
+    _headerSetup: function() {
       var base = this;
+      var $body = $(document.body);
+      var $header = $('.edison-header');
+      var headerHeight;
 
-      if($('#wsite-mini-cart').find('li.wsite-product-item').length > 0) {
-        $('body').addClass('cart-full');
-      } else {
-        $('body').removeClass('cart-full');
+      // Call other header functions
+      base._moveUtils();
+
+      // Wait for redraw to happen after appending
+      window.requestAnimationFrame(function() {
+        base._detectHeaderWrap();
+        headerHeight = $header.outerHeight();
+
+        if ($('.header-sticky:not(.header-compressed)').length || $body.hasClass('header-sticky-up')) {
+          $body.css({ paddingTop: headerHeight });
+        }
+      });
+
+      if ($body.hasClass('header-sticky-up')) {
+        base._utils.onScrollDirection({
+          down: function(currentScrollTop) {
+            $header
+              .removeClass('is-visible')
+              .toggleClass('is-sticky', (currentScrollTop > headerHeight * 2));
+
+            base._closeAllDropdowns();
+          },
+          up: function() {
+            $header.addClass('is-visible');
+          },
+        });
+      }
+
+      if ($body.hasClass('header-sticky')) {
+        $(window).on('scroll', function() {
+          $body.toggleClass('header-compressed', $(this).scrollTop() > headerHeight * 2);
+        });
       }
     },
 
-    _moveLogin: function() {
-      var loginDetach = $('#member-login').detach();
-      $('.mobile-nav .wsite-menu-default > li:last-child').after(loginDetach);
+    _detectHeaderWrap: function() {
+      var headerHeight = $('.edison-header').outerHeight();
+
+      $('body').toggleClass('header-multiline', (headerHeight > 100));
+
+      // No logo
+      if ($('.wsite-logo').children('.wsite-title-placeholder').length) {
+        $('body').addClass('logo-hidden');
+      }
+
+      // No Utils
+      if (!$('.wsite-search').length && !$('.wsite-custom-minicart-wrapper').length) {
+        $('body').addClass('utils-hidden');
+      }
+
+      setTimeout(function() {
+        if ($('#icontent .wsite-search').is(':hidden') && !$('.wsite-custom-minicart-wrapper').length) {
+          $('body').addClass('utils-hidden');
+        }
+      }, 800);
+    },
+
+    _moveUtils: function() {
+      var base = this;
+      var winWidth = window.innerWidth;
+      var $login = $('#member-login');
+      var $search = $('.wsite-search-wrap');
+
+      if (winWidth >= base._breakpoints.small) {
+        $login.appendTo('.desktop-nav .wsite-menu-default');
+        $search.prependTo('.site-utils');
+      } else {
+        $login.appendTo('.mobile-nav .wsite-menu-default');
+        $search.prependTo('.mobile-nav');
+      }
+
+      base._observeDom($('.dummy-menu')[0], function(observer, target, config, mutation) {
+        // Remove the duplicate login link after it is added
+        if (mutation.addedNodes[0] === undefined || mutation.addedNodes[0].id !== 'member-login') return;
+        $('.dummy-menu #member-login').remove();
+      }, { subtree: true });
+    },
+
+    _navSetup: function() {
+      var base = this;
+      var $submenuContainer = $('.nav .has-submenu');
+      var dropdownClass = 'dropdown-open';
+
+      var bindNavEvents = function() {
+        $submenuContainer.each(function() {
+          $(this)
+            .children('a')
+            .off('click')
+            .on('click.edison', function(event) {
+              // Toggle submenu
+              $(this)
+                .parent()
+                .toggleClass(dropdownClass)
+                .children('.wsite-menu-wrap')
+                .revealer('toggle');
+
+              // Hide children of other main nav items on desktop
+              if (!$('.hamburger').is(':visible')) {
+                $(this)
+                  .closest('li')
+                  .siblings('.has-submenu')
+                  .hideDropdowns(dropdownClass);
+              }
+
+              return false;
+            });
+        });
+
+        $('.cloned-link > a').off('click.edison');
+      }
+
+      // Unbind / bind after defaults have run
+      base._observeDom($('.wsite-menu-default')[0], function() {
+        bindNavEvents();
+      }, { subtree: true });
+
+      // Clone parent links into subnav
+      $submenuContainer.each(function() {
+        var $link = $(this).children('a');
+
+        if ($link.attr('href') === undefined || $link.hasClass('dead-link')) return;
+
+        $link
+          .parent()
+          .clone()
+          .removeClass('has-submenu wsite-menu-item-wrap')
+          .addClass('wsite-menu-subitem-wrap cloned-link')
+          .children('a')
+          .removeClass('wsite-menu-item')
+          .addClass('wsite-menu-subitem')
+          .parent()
+          .prependTo($link.next('.wsite-menu-wrap').children('.wsite-menu'));
+
+        $('.cloned-link').find('.wsite-menu-wrap').remove();
+      });
+
+      // Close dropdowns if clicking outside nav
+      $(document).on('click', function(event) {
+        if ($(event.target).closest('.nav-wrap').length) {
+          event.stopPropagation();
+        } else {
+          base._closeAllDropdowns();
+        }
+      });
+
+      // Close dropdowns on esc
+      base._utils.onEscKey(function() {
+        if (!$('.dropdown-open').length) return;
+        base._closeAllDropdowns();
+      });
+    },
+
+    _closeAllDropdowns: function() {
+      $('.edison-header')
+        .find('.dropdown-open')
+        .hideDropdowns('dropdown-open');
+    },
+
+    _searchBox: function() {
+      var base = this;
+      var searchBox = '.wsite-search'; // Not available in editor on doc ready
+      var $searchToggle = $('.search-toggle');
+      var searchPosition = $searchToggle.outerHeight() + $searchToggle.offset().top;
+
+      // Make sure the editor also gets the class
+      $.fn.intervalLoop('', function() {
+        if ($('.wsite-search').attr('style') === 'display: none;') return;
+        $('body').toggleClass('has-site-search', !!$('.wsite-search').length);
+      }, 800, 5);
+
+      $(searchBox)
+        .css({top: searchPosition})
+        .on('revealer-show', function() {
+          $(searchBox).find('.wsite-search-input').focus();
+        })
+        .find('.wsite-search-input')
+        .attr('placeholder', 'Search site')
+        .on('blur', function() {
+          setTimeout(function() {
+            $(searchBox).revealer('hide');
+          }, 300);
+        });
+
+      base._utils.onEscKey(function() {
+        if ($(searchBox).revealer('isVisible')) {
+          $(searchBox).revealer('hide');
+        }
+      });
+
+      $searchToggle.on('click', function(event) {
+        event.preventDefault();
+        $(searchBox).revealer('toggle');
+      });
+    },
+
+    _miniCartSetup: function() {
+      var base = this;
+      var $minicart = $('#wsite-mini-cart');
+      var cartOpenClass = 'mini-cart-open';
+      var toggleMiniCart = function(state) {
+        var revealerState = state ? 'show' : 'hide';
+        $('body').toggleClass(cartOpenClass, state);
+        $('.mini-cart-overlay').revealer(revealerState);
+      };
+      var hijackMinicart = function() {
+        var toggleText = $('#wsite-nav-cart-a').html().replace(/["'()]/g,"");
+
+        $('#wsite-nav-cart-a')
+          .html(toggleText)
+          .off('click mouseenter mouseover mouseleave mouseout');
+
+        $('#wsite-mini-cart')
+          .off('mouseenter mouseover mouseleave mouseout')
+          .removeClass('arrow-top')
+          .removeAttr('style')
+          .prepend($('.mini-cart-header'));
+
+        $('.mini-cart-toggle').toggleClass('has-mini-cart', !!$('.mini-cart-toggle').children().length);
+      };
+      var hijackMinicartToggle = function() {
+        var $toggle = $('#wsite-nav-cart-a');
+        var toggleText = $toggle.html().replace(/["'()]/g,"");
+        var itemCount = parseInt($('#wsite-nav-cart-num').text(), 10);
+        var hasItems = isNaN(itemCount) || itemCount === 0 ? false : true;
+
+        $toggle
+          .html(toggleText)
+          .addClass('toggle-custom')
+          .off('click mouseenter mouseover mouseleave mouseout');
+
+        setTimeout(function() {
+          $toggle.toggleClass('has-items', hasItems);
+        }, 100);
+      };
+
+      $(document).on('click', '.wsite-nav-cart', function() {
+        toggleMiniCart(true);
+      });
+
+      $(document).on('click', '.button-mini-cart-close, .mini-cart-overlay', function() {
+        toggleMiniCart(false);
+      });
+
+      base._utils.onEscKey(function() {
+        if ($('body').hasClass(cartOpenClass)) {
+          toggleMiniCart(false);
+        }
+      });
+
+      // Watch for minicart
+      base._observeDom(document, function(docObserver, target, config) {
+        // Bail if minicart not available yet
+        if (!$('#wsite-mini-cart').length || !$('#wsite-nav-cart-a').length) return;
+
+        // Watch minicart
+        base._observeDom($('#wsite-mini-cart')[0], function(observer, target, config) {
+          // Disconnect before making changes
+          observer.disconnect();
+
+          // Unbind default handlers etc.
+          hijackMinicart();
+
+          // Start watching again (for add / remove of items etc.)
+          observer.observe(target, config);
+        });
+
+        // Watch toggle for childList changes (ie. when the text changes)
+        base._observeDom($('#wsite-nav-cart-a')[0], function(observer, target, config, mutation) {
+          observer.disconnect();
+          hijackMinicartToggle();
+          observer.observe(target, config);
+        }, { attributes: false, characterData: false });
+
+        // $minicart available, so stop watching the doc
+        docObserver.disconnect();
+      }, { subtree: true });
+    },
+
+    _productSetup: function() {
+      $('.product-grid-layout--above, .product-grid-layout--below').find('.product-grid__item').each(function() {
+        var $product = $(this);
+        $product.find('.product-grid__button').appendTo($product.find('.product-grid__images'));
+      });
     },
 
     _attachEvents: function() {
       var base = this;
 
-        // Nav toggle
-        $('label.hamburger').on('click', function() {
-            if(!$('body').hasClass('nav-open')) {
-                $('body').addClass('nav-open');
-            } else {
-                $('body').removeClass('nav-open');
-            }
-        });
-
-
-      // Move cart + login
-      if ($(window).width() <= 992) {
-        $.fn.intervalLoop('.mobile-nav #member-login', base._moveLogin, 800, 5);
-      }
-
-    	// Window scroll
-      if($('body').hasClass('page-has-banner')) {
-        var offset;
-        var headerHeight = $('.dusk-header').outerHeight();
-
-        $(window).on('scroll', function(){
-
-          // Set offset
-          if($(window).width() <= 767) {
-            offset = headerHeight;
-          } else {
-            offset = 0;
-          }
-
-          // Affix nav
-          if ($('.desktop-nav .wsite-menu-default').text().length > 1) {
-            $('.main-wrap').checkElementPositioning($('body.page-has-banner'), $('.dusk-header'), 'affix');
-          }
-
-          // Fade out banner header
-          $('body:not(.header-animation-off) .banner h2').fadeBanner($('body.page-has-banner'), 'fade-on-scroll', offset);
-        });
-      }
-
-        // Subnav toggle
-        $('li.has-submenu span.icon-caret').on('click', function() {
-            var $me = $(this);
-
-            if($me.siblings('.wsite-menu-wrap').hasClass('open')) {
-                $me.siblings('.wsite-menu-wrap').removeClass('open');
-            } else {
-                $me.siblings('.wsite-menu-wrap').addClass('open');
-            }
-        });
+      // Nav toggle
+      $('.hamburger').on('click', function() {
+        $('body').toggleClass('nav-open');
+        $('.mobile-nav').revealer('toggle');
+      });
 
       // Store category dropdown
       $('.wsite-com-sidebar').expandableSidebar('sidebar-expanded');
@@ -192,7 +424,7 @@ jQuery(function($) {
       // Search filters dropdown
       $('#wsite-search-sidebar').expandableSidebar('sidebar-expanded');
 
-    	// Init fancybox swipe on mobile
+      // Init fancybox swipe on mobile
       if ('ontouchstart' in window) {
         $('body').on('click', 'a.w-fancybox', function() {
           base._initSwipeGallery();
@@ -215,10 +447,30 @@ jQuery(function($) {
           base._initSwipeGallery();
         });
       }, 500);
+    },
+
+    _observeDom: function(target, callback, config) {
+      var config = $.extend({
+        attributes: true,
+        childList: true,
+        characterData: true
+      }, config);
+
+      // create an observer instance & callback
+      var observer = new MutationObserver(function(mutations) {
+        // Using every() instead of forEach() allows us to short-circuit the observer in the callback
+        mutations.every(function(mutation) {
+          callback(observer, target, config, mutation);
+        });
+      });
+
+      // pass in the target node, as well as the observer options
+      observer.observe(target, config);
     }
   }
 
   $(document).ready(function(){
-    duskController.init();
+    edisonController.init();
   });
+
 });

@@ -1,58 +1,79 @@
 {
-	"responsive": true,
-    "glyph-icons": true,
-	"enableEditorJS": true,
-    "description": "Dusk gives your website an extra wash of color and sophisticated design elements. The professional palettes and fixed navigation allow your content and brand to remain beautifully positioned on all pages.",
-    "features": [
-        "responsive",
-        "css-buttons",
-        "social-icons",
-        "full-width-header",
-        "navigation-center",
-        "color-palettes"
-    ],
-    "color-support": {
-      "primary": "#07342a",
-      "accent": "#388070"
+  "responsive": true,
+  "glyph-icons": true,
+  "enableEditorJS": true,
+  "description": "Edison is a minimalist theme that puts your content front and center. With a classic Monospace and Sans Serif typography pairing and a modern color palette, Edison lets you and your content determine the tone of your site. Edison is perfect for artists, photographers, architects, bloggers, and minimalists.",
+  "features": [
+    "responsive",
+    "navigation-fixed",
+    "boxed-width",
+    "css-buttons",
+    "social-icons",
+    "navigation-top",
+    "boxed-header"
+  ],
+  "custom-options": [
+    {
+      "name": "header",
+      "title": "Navigation",
+      "type": "dropdown",
+      "default": "sticky",
+      "is-body-class": true,
+      "choices": [
+        {
+          "value": "sticky",
+          "title": "Sticky"
+        },
+        {
+          "value": "sticky-up",
+          "title": "Hide"
+        },
+        {
+          "value": "static",
+          "title": "Static"
+        }
+      ]
     },
-    "color-presets": [
-        {
-          "primary": "#07342a",
-          "accent": "#388070",
-          "variation": "green"
-        },
-        {
-          "primary": "#071b34",
-          "accent": "#385880",
-          "variation": "blue"
-        },
-        {
-          "primary": "#202020",
-          "accent": "#ff8400",
-          "variation": "grey"
-        },
-        {
-          "primary": "#8a0b16",
-          "accent": "#991723",
-          "variation": "red"
-        }
-    ],
-    "custom-options" : [
-        {
-            "name" : "header-overlay",
-            "title": "Header Color",
-            "type" : "toggle",
-            "default" : true,
-            "is-body-class" : true,
-            "is-less-var" : false
-        },
-        {
-            "name" : "header-animation",
-            "title": "Header Fade on Scroll",
-            "type" : "toggle",
-            "default" : true,
-            "is-body-class" : true,
-            "is-less-var" : false
-        }
-    ]
+    {
+      "name": "banner-overlay",
+      "title": "Show banner overlay",
+      "type": "toggle",
+      "default": true,
+      "is-body-class": true,
+      "is-less-var": false
+    },
+    {
+      "name": "color-banner-overlay",
+      "title": "Banner overlay",
+      "type": "color",
+      "default": "#ffffff",
+      "is-body-class": false,
+      "is-less-var": true
+    }
+  ],
+  "color-support": {
+    "primary": "#262626"
+  },
+  "color-presets": [
+    {
+      "primary": "#262626",
+      "variation": "black"
+    },
+    {
+      "primary": "#ed5757",
+      "variation": "red"
+    },
+    {
+      "primary": "#6adb7e",
+      "variation": "green"
+    },
+    {
+      "primary": "#337ef9",
+      "variation": "blue"
+    },
+    {
+      "primary": "#f5a623",
+      "variation": "orange"
+    }
+  ]
 }

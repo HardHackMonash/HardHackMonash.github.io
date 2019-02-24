@@ -1,1 +1,0 @@
-# HardHackMonash.github.io

@@ -21,6 +21,8 @@ for file in os.listdir(parent_dir):  # list files in directory
 
         # Add Google Analytics to the pages
         try:
+            print(file)
+            print(str(soup).find('UA-117176866-1'))
             if str(soup).find('UA-117176866-1') == -1:
                 soup.find('body').append(google_analytics)
         except AttributeError:
