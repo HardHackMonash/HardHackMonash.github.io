@@ -21,8 +21,6 @@ for file in os.listdir(parent_dir):  # list files in directory
 
         # Add Google Analytics to the pages
         try:
-            print(file)
-            print(str(soup).find('UA-117176866-1'))
             if str(soup).find('UA-117176866-1') == -1:
                 soup.find('body').append(google_analytics)
         except AttributeError:
@@ -36,6 +34,10 @@ for file in os.listdir(parent_dir):  # list files in directory
 
         # Replace /uploads
         soup_string = str(soup).replace('/uploads', 'uploads')
+        soup = BeautifulSoup(soup_string, "html.parser")
+
+        # Replace http with https
+        soup_string = str(soup).replace('http://', 'https://')
         soup = BeautifulSoup(soup_string, "html.parser")
 
         # # dbg only: doesn't overwrite
