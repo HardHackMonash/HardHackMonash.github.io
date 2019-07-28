@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <title>
-   Components - HARDHACK 2019
-  </title>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Oswald:700|Roboto+Mono:400,400i,700,700i" rel="stylesheet"/>
-  <script src="files/theme/MutationObserver.js">
-  </script>
+	<head>
+		<title>Components - HARDHACK 2019</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href="http://fonts.googleapis.com/css?family=Karla:400,700|Oswald:700|Roboto+Mono:400,400i,700,700i" rel="stylesheet">
+  <script src="files/theme/MutationObserver.js"></script>
   <style>
-   .navbar__logo .icon,
+    .navbar__logo .icon,
     .navbar__center .navbar__logo:after {
         color: #2990ea !important;
     }
@@ -23,17 +23,20 @@
       box-shadow: inset 0 0 0 2px #C9CDCF !important;
     }
   </style>
-  <link href="https://cdn2.editmysite.com/css/sites.css?buildTime=1234" id="wsite-base-style" rel="stylesheet" type="text/css"/>
-  <link href="https://cdn2.editmysite.com/css/old/fancybox.css?1234" rel="stylesheet" type="text/css"/>
-  <link href="https://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" rel="stylesheet" type="text/css">
-   <link href="files/main_style.css?1551582363" rel="stylesheet" title="wsite-theme-css" type="text/css"/>
-   <link href="https://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
-   <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
-   <link href="https://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
-   <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
-   <link href="https://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
-   <style type="text/css">
-    .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Karla" !important;}
+
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/social-icons.css?buildtime=1234" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1564282673" title="wsite-theme-css" />
+<link href='http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Karla" !important;}
 #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
 .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
 .wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-weight:700 !important;letter-spacing: 0px !important;}
@@ -77,21 +80,18 @@
 .blog-header h2 a {}
 #wsite-content h2.wsite-product-title {}
 .wsite-product .wsite-product-price a {}
-}
-   </style>
-   <script>
-    var STATIC_BASE = '//cdn1.editmysite.com/';
+}</style>
+
+		<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
 var ASSETS_BASE = '//cdn2.editmysite.com/';
 var STYLE_PREFIX = 'wsite';
-   </script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-   </script>
-   <script src="https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&amp;" type="text/javascript">
-   </script>
-   <script src="https://cdn2.editmysite.com/js/site/main.js?buildTime=1234">
-   </script>
-   <script type="text/javascript">
-    function initCustomerAccountsModels() {
+</script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
 					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
 _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
 })();
@@ -103,41 +103,21 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 		} else if(document.documentElement.initCustomerAccountsModels === 0){
 			document.documentElement.initCustomerAccountsModels++
 		}
-   </script>
-   <script type="text/javascript">
-    _W = _W || {}; _W.securePrefix='UNSET';
-   </script>
-   <script>
-    _W = _W || {};
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
 			_W.customerLocale = "en_US";
 			_W.storeName = null;
 			_W.storeCountry = "AU";
 			_W.storeCurrency = "AUD";
 			_W.storeEuPrivacyPolicyUrl = "";
 			com_currentSite = "240750007582293700";
-			com_userID = "101799490";
-   </script>
-   <script type="text/javascript">
-    _W.configDomain = "www.weebly.com";
-   </script>
-   <script>
-    _W.relinquish && _W.relinquish()
-   </script>
-   <script src="https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&amp;" type="text/javascript">
-   </script>
-   <script>
-    _W.themePlugins = [];
-   </script>
-   <script type="text/javascript">
-    _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js";
-   </script>
-   <script type="text/javascript">
-    <!--
+			com_userID = "101799490";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
 	var IS_ARCHIVE = 1;
 	
 	function initFlyouts(){
 		initPublishedFlyoutMenus(
-			[{"id":"980729199903201996","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"180778030686805773","title":"Details","url":"details.html","target":"","nav_menu":false,"nonclickable":false},{"id":"262351605450613938","title":"Components","url":"components.html","target":"","nav_menu":false,"nonclickable":false},{"id":"558157107831467310","title":"Rules","url":"rules.html","target":"","nav_menu":false,"nonclickable":false},{"id":"512481355700656421","title":"2018 Projects","url":"2018-projects.html","target":"","nav_menu":false,"nonclickable":false},{"id":"766801339173964871","title":"FAQ","url":"faq.html","target":"","nav_menu":false,"nonclickable":false},{"id":"219636233715695400","title":"About Us","url":"about-us.html","target":"","nav_menu":false,"nonclickable":false},{"id":"461629139258069737","title":"Buy Tickets","url":"https:\/\/www.eventbrite.com.au\/e\/hardhack-2019-tickets-57270996091","target":"_blank","nav_menu":false,"nonclickable":false}],
+			[{"id":"980729199903201996","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"180778030686805773","title":"Details","url":"details.html","target":"","nav_menu":false,"nonclickable":false},{"id":"262351605450613938","title":"Components","url":"components.html","target":"","nav_menu":false,"nonclickable":false},{"id":"558157107831467310","title":"Rules","url":"rules.html","target":"","nav_menu":false,"nonclickable":false},{"id":"826011429284417961","title":"2019 Projects","url":"2019-projects.html","target":"","nav_menu":false,"nonclickable":false},{"id":"512481355700656421","title":"2018 Projects","url":"2018-projects.html","target":"","nav_menu":false,"nonclickable":false},{"id":"766801339173964871","title":"FAQ","url":"faq.html","target":"","nav_menu":false,"nonclickable":false},{"id":"219636233715695400","title":"About Us","url":"about-us.html","target":"","nav_menu":false,"nonclickable":false}],
 			"262351605450613938",
 			'',
 			'active',
@@ -147,1516 +127,1134 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 		)
 	}
 //-->
-   </script>
-  </link>
- </head>
- <body class="no-header-page wsite-theme-light wsite-page-components header-sticky banner-overlay-on ">
-  <div class="wrapper">
-   <div class="edison-header">
-    <div class="container">
-     <div class="header-inner-wrap">
-      <div class="logo">
-       <span class="wsite-logo">
-        <a href="/">
-         <span id="wsite-title">
-          HARDHACK 2019
-         </span>
-        </a>
-       </span>
+</script>
+		
+		
+	</head>
+	<body class="no-header-page  wsite-theme-light  wsite-page-components header-sticky banner-overlay-on "><div class="wrapper">
+    <div class="edison-header">
+      <div class="container">
+        <div class="header-inner-wrap">
+          <div class="logo">
+            <span class="wsite-logo">
+
+	<a href="">
+	
+	<span id="wsite-title">HARDHACK 2019</span>
+	
+	</a>
+
+</span>
+          </div>
+          <div class="nav-wrap">
+            <div class="dummy-menu"><ul class="wsite-menu-default">
+		<li id="pg980729199903201996" class="wsite-menu-item-wrap ">
+		  <a
+		        href="index.html"
+		      class="wsite-menu-item"
+		    >
+		    Home
+		  </a>
+		  
+		</li>
+		<li id="pg180778030686805773" class="wsite-menu-item-wrap ">
+		  <a
+		        href="details.html"
+		      class="wsite-menu-item"
+		    >
+		    Details
+		  </a>
+		  
+		</li>
+		<li id="active" class="wsite-menu-item-wrap ">
+		  <a
+		        href="components.html"
+		      class="wsite-menu-item"
+		    >
+		    Components
+		  </a>
+		  
+		</li>
+		<li id="pg558157107831467310" class="wsite-menu-item-wrap ">
+		  <a
+		        href="rules.html"
+		      class="wsite-menu-item"
+		    >
+		    Rules
+		  </a>
+		  
+		</li>
+		<li id="pg826011429284417961" class="wsite-menu-item-wrap ">
+		  <a
+		        href="2019-projects.html"
+		      class="wsite-menu-item"
+		    >
+		    2019 Projects
+		  </a>
+		  
+		</li>
+		<li id="pg512481355700656421" class="wsite-menu-item-wrap ">
+		  <a
+		        href="2018-projects.html"
+		      class="wsite-menu-item"
+		    >
+		    2018 Projects
+		  </a>
+		  
+		</li>
+		<li id="pg766801339173964871" class="wsite-menu-item-wrap ">
+		  <a
+		        href="faq.html"
+		      class="wsite-menu-item"
+		    >
+		    FAQ
+		  </a>
+		  
+		</li>
+		<li id="pg219636233715695400" class="wsite-menu-item-wrap ">
+		  <a
+		        href="about-us.html"
+		      class="wsite-menu-item"
+		    >
+		    About Us
+		  </a>
+		  
+		</li>
+</ul>
+</div>
+            <div class="nav desktop-nav"><ul class="wsite-menu-default">
+		<li id="pg980729199903201996" class="wsite-menu-item-wrap ">
+		  <a
+		        href="index.html"
+		      class="wsite-menu-item"
+		    >
+		    Home
+		  </a>
+		  
+		</li>
+		<li id="pg180778030686805773" class="wsite-menu-item-wrap ">
+		  <a
+		        href="details.html"
+		      class="wsite-menu-item"
+		    >
+		    Details
+		  </a>
+		  
+		</li>
+		<li id="active" class="wsite-menu-item-wrap ">
+		  <a
+		        href="components.html"
+		      class="wsite-menu-item"
+		    >
+		    Components
+		  </a>
+		  
+		</li>
+		<li id="pg558157107831467310" class="wsite-menu-item-wrap ">
+		  <a
+		        href="rules.html"
+		      class="wsite-menu-item"
+		    >
+		    Rules
+		  </a>
+		  
+		</li>
+		<li id="pg826011429284417961" class="wsite-menu-item-wrap ">
+		  <a
+		        href="2019-projects.html"
+		      class="wsite-menu-item"
+		    >
+		    2019 Projects
+		  </a>
+		  
+		</li>
+		<li id="pg512481355700656421" class="wsite-menu-item-wrap ">
+		  <a
+		        href="2018-projects.html"
+		      class="wsite-menu-item"
+		    >
+		    2018 Projects
+		  </a>
+		  
+		</li>
+		<li id="pg766801339173964871" class="wsite-menu-item-wrap ">
+		  <a
+		        href="faq.html"
+		      class="wsite-menu-item"
+		    >
+		    FAQ
+		  </a>
+		  
+		</li>
+		<li id="pg219636233715695400" class="wsite-menu-item-wrap ">
+		  <a
+		        href="about-us.html"
+		      class="wsite-menu-item"
+		    >
+		    About Us
+		  </a>
+		  
+		</li>
+</ul>
+</div>
+          </div>
+          <div class="site-utils">
+            <div class="wsite-search-wrap">
+              <a href="#" class="search-toggle">
+                Search
+              </a>
+              
+            </div>
+            
+            <button class="hamburger"><i></i></button>
+          </div>
+        </div>
       </div>
-      <div class="nav-wrap">
-       <div class="dummy-menu">
-        <ul class="wsite-menu-default">
-         <li class="wsite-menu-item-wrap " id="pg980729199903201996">
-          <a class="wsite-menu-item" href="index.html">
-           Home
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg180778030686805773">
-          <a class="wsite-menu-item" href="details.html">
-           Details
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="active">
-          <a class="wsite-menu-item" href="components.html">
-           Components
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg558157107831467310">
-          <a class="wsite-menu-item" href="rules.html">
-           Rules
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg512481355700656421">
-          <a class="wsite-menu-item" href="2018-projects.html">
-           2018 Projects
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg766801339173964871">
-          <a class="wsite-menu-item" href="faq.html">
-           FAQ
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg219636233715695400">
-          <a class="wsite-menu-item" href="about-us.html">
-           About Us
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg461629139258069737">
-          <a class="wsite-menu-item" href="https://www.eventbrite.com.au/e/hardhack-2019-tickets-57270996091" target="_blank">
-           Buy Tickets
-          </a>
-         </li>
-        </ul>
-       </div>
-       <div class="nav desktop-nav">
-        <ul class="wsite-menu-default">
-         <li class="wsite-menu-item-wrap " id="pg980729199903201996">
-          <a class="wsite-menu-item" href="index.html">
-           Home
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg180778030686805773">
-          <a class="wsite-menu-item" href="details.html">
-           Details
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="active">
-          <a class="wsite-menu-item" href="components.html">
-           Components
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg558157107831467310">
-          <a class="wsite-menu-item" href="rules.html">
-           Rules
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg512481355700656421">
-          <a class="wsite-menu-item" href="2018-projects.html">
-           2018 Projects
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg766801339173964871">
-          <a class="wsite-menu-item" href="faq.html">
-           FAQ
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg219636233715695400">
-          <a class="wsite-menu-item" href="about-us.html">
-           About Us
-          </a>
-         </li>
-         <li class="wsite-menu-item-wrap " id="pg461629139258069737">
-          <a class="wsite-menu-item" href="https://www.eventbrite.com.au/e/hardhack-2019-tickets-57270996091" target="_blank">
-           Buy Tickets
-          </a>
-         </li>
-        </ul>
-       </div>
-      </div>
-      <div class="site-utils">
-       <div class="wsite-search-wrap">
-        <a class="search-toggle" href="#">
-         Search
-        </a>
-       </div>
-       <button class="hamburger">
-        <i>
-        </i>
-       </button>
-      </div>
-     </div>
     </div>
-   </div>
-   <div class="content-wrap">
-    <div class="wsite-elements wsite-not-footer" id="wsite-content">
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-28" style="height: 414px;background-color: #ffffff;background-image: none;">
-       <div class="wsite-section-content">
+
+    <div class="content-wrap">
+      <div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-28" style="height: 414px;background-color: #ffffff;background-image: none;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <h2 class="wsite-content-title">
-           <font size="6">
-            Limited &amp; Standard Components
-           </font>
-           <br/>
-          </h2>
-          <div class="paragraph">
-           <font color="#2a2a2a">
-            There are set of standard and limited components during the competition. Everyone will get the standard components at the start of the competition. You are also given the opportunity to request limited components during the competition, however there is no guarantee that all limited components are available.
-           </font>
-           <br/>
-           <font color="#2a2a2a">
-            Standard and Limited Components are required to be returned at the conclusion of the event.
-           </font>
-          </div>
-          <div class="wsite-spacer" style="height:50px;">
-          </div>
-          <h2 class="wsite-content-title">
-           Limited Components
-          </h2>
-          <div class="paragraph">
-           <font color="#2a2a2a">
-            The components listed below are limited. You do not need to pay for these components as long as they are returned undamaged.
-            <br/>
-            We will not allow teams to request excessive quantities of components; limits apply per team.
-           </font>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title"><font size="6">Limited &amp; Standard Components</font><br /></h2>
+
+<div class="paragraph"><font color="#2a2a2a">There are set of standard and limited components during the competition. Everyone will get the standard components at the start of the competition. You are also given the opportunity to request limited components during the competition, however there is no guarantee that all limited components are available.</font><br /><font color="#2a2a2a">Standard and Limited Components are required to be returned at the conclusion of the event.</font></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title">Limited Components</h2>
+
+<div class="paragraph"><font color="#2a2a2a">The components listed below are limited. You do not need to pay for these components as long as they are returned undamaged.<br />We will not allow teams to request excessive quantities of components; limits apply per team.</font></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-32" style="height: auto;background-color: #ffffff;background-image: none;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-32" style="height: auto;background-color: #ffffff;background-image: none;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font size="5">
-                   RasPi Zero W
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                   <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/" target="_blank">
-                    https://www.raspberrypi.org/products/raspberry-pi-zero-w/​
-                   </a>
-                  </font>
-                  <ul>
-                   <li>
-                    <font color="#2a2a2a">
-                     Raspbian Stretch + OpenCV 3.4.1 pre-compiled (C/C++/Python). Pre-loaded onto 16GB SD cards.
-                    </font>
-                   </li>
-                   <li>
-                    <font color="#2a2a2a">
-                     OTG pre-enabled (allowing ssh-over-usb).
-                    </font>
-                   </li>
-                   <li>
-                    <font color="#2a2a2a">
-                     Raspberry Pi cameras available too.
-                    </font>
-                   </li>
-                   <li>
-                    <font color="#2a2a2a">
-                     We will not provide monitors but tutorial rooms typically have them available.
-                    </font>
-                   </li>
-                  </ul>
-                  <strong>
-                   <font color="#2a2a2a">
-                    Helpful Links:
-                   </font>
-                  </strong>
-                  <ul>
-                   <li>
-                    <font color="#2a2a2a">
-                     <a href="https://pinout.xyz/pinout/wiringpi" target="_blank">
-                      https://pinout.xyz/pinout/wiringpi
-                     </a>
-                    </font>
-                   </li>
-                  </ul>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/691676807_orig.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/691676807.jpg?1523062309" style="width:397;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font size="5">RasPi Zero W</font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/" target="_blank">https://www.raspberrypi.org/products/raspberry-pi-zero-w/&#8203;</a></font><ul><li><font color="#2a2a2a">Raspbian Stretch + OpenCV 3.4.1 pre-compiled (C/C++/Python). Pre-loaded onto 16GB SD&nbsp;cards.</font></li><li><font color="#2a2a2a">OTG pre-enabled (allowing ssh-over-usb).</font></li><li><font color="#2a2a2a">Raspberry Pi cameras available too.</font></li><li><font color="#2a2a2a">We will not provide monitors but tutorial rooms typically have them available.</font></li></ul><strong><font color="#2a2a2a">Helpful Links:</font></strong><ul><li><font color="#2a2a2a"><a href="https://pinout.xyz/pinout/wiringpi" target="_blank">https://pinout.xyz/pinout/wiringpi</a></font></li></ul></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/691676807_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/691676807.jpg?1523062309" alt="Picture" style="width:397;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-54" style="height: auto;background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-54" style="height: auto;background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font size="5">
-                   Raspberry Pi Zero Camera
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <a href="https://www.adafruit.com/product/1367" target="_blank">
-                   https://www.adafruit.com/product/1367
-                  </a>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/612344590_orig.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/612344590.jpg?1550901760" style="width:337;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font size="5">Raspberry Pi Zero Camera</font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font></font><a href="https://www.adafruit.com/product/1367" target="_blank">https://www.adafruit.com/product/1367</a></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/612344590_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/612344590.jpg?1550901760" alt="Picture" style="width:337;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-background-50">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-50"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font size="5">
-                   Schneider Thinkxtra Xkit
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <strong>
-                    Notes: ​
-                   </strong>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://www.thinxtra.com/xkit/" target="_blank">
-                    https://www.thinxtra.com/xkit/
-                   </a>
-                  </span>
-                  <br/>
-                  <span>
-                   <font color="#2a2a2a">
-                    Make sure you scroll to the bottom of the page to find instructions, datasheets and pinouts.
-                   </font>
-                  </span>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/452937406_orig.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/452937406.jpg?1523841701" style="width:281;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font size="5">Schneider Thinkxtra Xkit</font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><strong>Notes:&nbsp;&#8203;</strong></font><span style="color:rgb(17, 85, 204)"><a href="https://www.thinxtra.com/xkit/" target="_blank">https://www.thinxtra.com/xkit/</a></span><br /><span><font color="#2a2a2a">Make sure you scroll to the bottom of the page to find instructions, datasheets and pinouts.</font></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/452937406_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/452937406.jpg?1523841701" alt="Picture" style="width:281;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-46" style="background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-46" style="background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font size="5">
-                   7 Segment Display
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino
-                    </strong>
-                    <strong>
-                     library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://github.com/bremme/arduino-tm1637" target="_blank">
-                    https://github.com/bremme/arduino-tm1637
-                   </a>
-                  </span>
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <br/>
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span>
-                   <font color="#2a2a2a">
-                    Text is not very well supported
-                   </font>
-                  </span>
-                  <font color="#2a2a2a">
-                  </font>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/7-seg_orig.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/7-seg.jpg?1550901766" style="width:282;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font size="5">7 Segment Display</font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong>&nbsp;<strong>library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://github.com/bremme/arduino-tm1637" target="_blank">https://github.com/bremme/arduino-tm1637</a></span><font color="#2a2a2a"><font size="4"><br /><strong>Notes</strong>:&nbsp;</font></font><span><font color="#2a2a2a">Text is not very well supported</font></span><font color="#2a2a2a"></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/7-seg_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/7-seg.jpg?1550901766" alt="Picture" style="width:282;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-47" style="background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-47" style="background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <strong>
-                   <font color="#2a2a2a" size="5">
-                    Ultrasonic Sensor
-                   </font>
-                  </strong>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino
-                    </strong>
-                    <strong>
-                     library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://playground.arduino.cc/Code/NewPing" target="_blank">
-                    https://playground.arduino.cc/Code/NewPing
-                   </a>
-                  </span>
-                  <br/>
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                   Returns 0 if it gets confused
-                  </font>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/edited/927206414.jpeg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/927206414.jpeg?1550901770" style="width:349;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><strong><font color="#2a2a2a" size="5">Ultrasonic Sensor</font></strong></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong>&nbsp;<strong>library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://playground.arduino.cc/Code/NewPing" target="_blank">https://playground.arduino.cc/Code/NewPing</a></span><br /><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font>Returns 0 if it gets confused</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/927206414.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/927206414.jpeg?1550901770" alt="Picture" style="width:349;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-51" style="background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-51" style="background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <strong>
-                   <font color="#2a2a2a" size="5">
-                    LCD Display
-                   </font>
-                  </strong>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://learn.adafruit.com/adafruit-arduino-lesson-11-lcd-displays-1/" target="_blank">
-                    https://learn.adafruit.com/adafruit-arduino-lesson-11-lcd-displays-1/
-                   </a>
-                  </span>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/947132335_orig.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/947132335.jpg?1550901774" style="width:395;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><strong><font color="#2a2a2a" size="5">LCD Display</font></strong></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://learn.adafruit.com/adafruit-arduino-lesson-11-lcd-displays-1/" target="_blank">https://learn.adafruit.com/adafruit-arduino-lesson-11-lcd-displays-1/</a></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/947132335_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/947132335.jpg?1550901774" alt="Picture" style="width:395;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-52" style="background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-52" style="background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font size="5">
-                   WeMos D1
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://wiki.wemos.cc/products:d1:d1" target="_blank">
-                    https://wiki.wemos.cc/products:d1:d1
-                   </a>
-                  </span>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/edited/198652955.jpeg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/198652955.jpeg?1550901779" style="width:367;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font size="5">WeMos D1</font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://wiki.wemos.cc/products:d1:d1" target="_blank">https://wiki.wemos.cc/products:d1:d1</a></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/198652955.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/198652955.jpeg?1550901779" alt="Picture" style="width:367;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-53" style="background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-53" style="background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <strong>
-                   <font color="#2a2a2a" size="5">
-                    SG90 MicroServos
-                   </font>
-                  </strong>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://www.arduino.cc/en/Reference/Servo" target="_blank">
-                    https://www.arduino.cc/en/Reference/Servo
-                    <br/>
-                   </a>
-                  </span>
-                  <strong style="color:rgb(42, 42, 42)">
-                   Notes
-                  </strong>
-                  <span style="color:rgb(42, 42, 42)">
-                   :
-                  </span>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf" target="_blank">
-                    https://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf
-                   </a>
-                  </span>
-                  <span style="color:rgb(42, 42, 42)">
-                  </span>
-                  <span style="color:rgb(17, 85, 204)">
-                  </span>
-                  <br/>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/554029318_orig.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/554029318.jpg?1550901784" style="width:328;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><strong><font color="#2a2a2a" size="5">SG90 MicroServos</font></strong></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://www.arduino.cc/en/Reference/Servo" target="_blank">https://www.arduino.cc/en/Reference/Servo<br /></a></span><strong style="color:rgb(42, 42, 42)">Notes</strong><span style="color:rgb(42, 42, 42)">:&nbsp;</span><span style="color:rgb(17, 85, 204)"><a href="http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf" target="_blank">http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf</a></span><span style="color:rgb(42, 42, 42)"></span><span style="color:rgb(17, 85, 204)"></span><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/554029318_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/554029318.jpg?1550901784" alt="Picture" style="width:328;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-55" style="background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-55" style="background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font color="#2a2a2a" size="5">
-                   <strong>
-                    DS1302 Clock Module
-                   </strong>
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://playground.arduino.cc/Main/DS1302" target="_blank">
-                    https://playground.arduino.cc/Main/DS1302
-                    <br/>
-                   </a>
-                  </span>
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://www.hobbytronics.co.uk/datasheets/DS1302.pdf" target="_blank">
-                    https://www.hobbytronics.co.uk/datasheets/DS1302.pdf
-                   </a>
-                  </span>
-                  <span style="color:rgb(17, 85, 204)">
-                  </span>
-                  <br/>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/edited/678501317.jpeg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/678501317.jpeg?1550901788" style="width:367;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>DS1302 Clock Module</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="http://playground.arduino.cc/Main/DS1302" target="_blank">http://playground.arduino.cc/Main/DS1302<br /></a></span><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="http://www.hobbytronics.co.uk/datasheets/DS1302.pdf" target="_blank">http://www.hobbytronics.co.uk/datasheets/DS1302.pdf</a></span><span style="color:rgb(17, 85, 204)"></span><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/678501317.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/678501317.jpeg?1550901788" alt="Picture" style="width:367;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-56" style="background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-56" style="background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font color="#2a2a2a" size="5">
-                   <strong>
-                    RC522 RFID Reader
-                   </strong>
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://playground.arduino.cc/Learning/MFRC522" target="_blank">
-                    https://playground.arduino.cc/Learning/MFRC522
-                   </a>
-                  </span>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/edited/30713442-10212729036595407-8490695837867835392-n_2.png" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/30713442-10212729036595407-8490695837867835392-n_2.png?1550901793" style="width:409;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>RC522 RFID Reader</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://playground.arduino.cc/Learning/MFRC522" target="_blank">https://playground.arduino.cc/Learning/MFRC522</a></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/30713442-10212729036595407-8490695837867835392-n_2.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/30713442-10212729036595407-8490695837867835392-n_2.png?1550901793" alt="Picture" style="width:409;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-57" style="background-color: #ffffff;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-57" style="background-color: #ffffff;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font color="#2a2a2a" size="5">
-                   <strong>
-                    MP1584EN Buck Converter
-                   </strong>
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                  </span>
-                  <a href="https://www.openimpulse.com/blog/products-page/product-category/mp1584en-mini-dc-dc-step-module/" target="_blank">
-                   https://www.openimpulse.com/blog/products-page/product-category/mp1584en-mini-dc-dc-step-module/
-                  </a>
-                  <span style="color:rgb(17, 85, 204)">
-                  </span>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/edited/773281307.jpeg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/773281307.jpeg?1550901796" style="width:283;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-          <div class="wsite-spacer" style="height:123px;">
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>MP1584EN Buck Converter</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"></span><a href="https://www.openimpulse.com/blog/products-page/product-category/mp1584en-mini-dc-dc-step-module/" target="_blank">https://www.openimpulse.com/blog/products-page/product-category/mp1584en-mini-dc-dc-step-module/</a><span style="color:rgb(17, 85, 204)"></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/773281307.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/773281307.jpeg?1550901796" alt="Picture" style="width:283;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="wsite-spacer" style="height:123px;"></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-image wsite-section-effect-reveal wsite-background-29">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-image wsite-section-effect-reveal wsite-background-29"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div align="left" class="wcustomhtml" id="913648505700268313" style="width: 100%; overflow-y: hidden;">
-            <div id="standard">
-            </div>
-           </div>
-          </div>
-          <h2 class="wsite-content-title">
-           Standard Components
-          </h2>
-          <div class="paragraph">
-           <font color="#2a2a2a">
-            All teams are given these components. You can find useful information on how they operate and how to use these components with Arduino libraries below. All teams will receive an
-            <strong>
-             Arduino Uno.
-            </strong>
-            ​
-           </font>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div id="913648505700268313" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><div id="standard"></div></div>
+
+
+
+</div>
+
+<h2 class="wsite-content-title">Standard Components</h2>
+
+<div class="paragraph"><font color="#2a2a2a">All teams are given these components. You can find useful information on how they operate and how to use these components with Arduino libraries below. All teams will receive an&nbsp;<strong>Arduino Uno.&nbsp;</strong>&#8203;</font></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-background-30">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-30"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <strong>
-                   <font color="#2a2a2a" size="5">
-                    Arduino Uno
-                   </font>
-                  </strong>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <strong style="">
-                    Notes: ​
-                   </strong>
-                   <a href="https://store.arduino.cc/usa/arduino-uno-rev3" style="" target="_blank">
-                    https://store.arduino.cc/usa/arduino-uno-rev3
-                   </a>
-                  </font>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/351738853_orig.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/351738853.jpg?1523841707" style="width:412;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><strong><font color="#2a2a2a" size="5">Arduino Uno</font></strong></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><strong style="">Notes:&nbsp;&#8203;</strong><a href="https://store.arduino.cc/usa/arduino-uno-rev3" target="_blank" style="">https://store.arduino.cc/usa/arduino-uno-rev3</a></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/351738853_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/351738853.jpg?1523841707" alt="Picture" style="width:412;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-background-48">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-48"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <strong>
-                   <font color="#2a2a2a" size="5">
-                    37 Sensors in one sensor kit for Arduino
-                   </font>
-                  </strong>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    Documentation + Photos + Arduino Libraries:
-                   </font>
-                  </font>
-                  <ul>
-                   <li>
-                    <font color="#2a2a2a" size="4">
-                     <a href="https://www.instructables.com/id/Arduino-37-in-1-Sensors-Kit-Explained/" target="_blank">
-                      https://www.instructables.com/id/Arduino-37-in-1-Sensors-Kit-Explained/
-                     </a>
-                    </font>
-                   </li>
-                  </ul>
-                  <ul>
-                   <li>
-                    <font color="#2a2a2a" size="4">
-                     <a href="https://tkkrlab.nl/wiki/Arduino_37_sensors" target="_blank">
-                      https://tkkrlab.nl/wiki/Arduino_37_sensors
-                     </a>
-                    </font>
-                    ​
-                   </li>
-                  </ul>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/637103912_2.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/editor/637103912_2.jpg" style="width:100%;max-width:1024px"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><strong><font color="#2a2a2a" size="5">37 Sensors in one sensor kit for Arduino</font></strong></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4">Documentation + Photos + Arduino Libraries:</font></font><ul><li><font color="#2a2a2a" size="4"><a href="http://www.instructables.com/id/Arduino-37-in-1-Sensors-Kit-Explained/" target="_blank">http://www.instructables.com/id/Arduino-37-in-1-Sensors-Kit-Explained/</a></font></li></ul><ul><li><font color="#2a2a2a" size="4"><a href="https://tkkrlab.nl/wiki/Arduino_37_sensors" target="_blank">https://tkkrlab.nl/wiki/Arduino_37_sensors</a></font>&#8203;</li></ul></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/637103912_2.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/editor/637103912_2.jpg" alt="Picture" style="width:100%;max-width:1024px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-background-45">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-45"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <strong>
-                   <font color="#2a2a2a" size="5">
-                    Soil Resistance Measurer
-                   </font>
-                  </strong>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino
-                    </strong>
-                    <strong>
-                     library
-                    </strong>
-                    : N/A
-                    <br/>
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span>
-                   <font color="#2a2a2a">
-                    Analogue read the AO (AnalogOut) pin. DO (DigitalOut) compares vs the potentiometer voltage
-                   </font>
-                  </span>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/753670208_2.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/753670208_2.jpg?1550901817" style="width:327;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><strong><font color="#2a2a2a" size="5">Soil Resistance Measurer</font></strong></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong> <strong>library</strong>: N/A<br /><strong>Notes</strong>:&nbsp;</font></font><span><font color="#2a2a2a">Analogue read the AO (AnalogOut) pin. DO (DigitalOut) compares vs the potentiometer voltage&nbsp;</font></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/753670208_2.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/753670208_2.jpg?1550901817" alt="Picture" style="width:327;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-background-33">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-33"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font color="#2a2a2a" size="5">
-                   <strong>
-                    IMU (MPU-6050) -
-                   </strong>
-                  </font>
-                  <strong>
-                   <font size="5">
-                    Accelerometer + Gyro
-                   </font>
-                  </strong>
-                  <font color="#2a2a2a" size="5">
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino
-                    </strong>
-                    <strong>
-                     library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://playground.arduino.cc/Main/MPU-6050" target="_blank">
-                    https://playground.arduino.cc/Main/MPU-6050
-                   </a>
-                  </span>
-                  <br/>
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Notes
-                    </strong>
-                    :
-                   </font>
-                   <u>
-                    This is 3.3v component. See Level shifting tutorial.
-                   </u>
-                   Needs 10k pullup resistors on the I2C lines. Read the page very carefully.
-                  </font>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/942344178_orig.jpeg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/942344178.jpeg?1550901822" style="width:345;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>IMU (MPU-6050) - </strong></font><strong><font size="5">Accelerometer + Gyro</font></strong><font color="#2a2a2a" size="5"></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong> <strong>library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://playground.arduino.cc/Main/MPU-6050" target="_blank">https://playground.arduino.cc/Main/MPU-6050</a></span><br /><font color="#2a2a2a"><font size="4"><strong>Notes</strong>:&nbsp;</font><u>This is 3.3v component. See Level shifting tutorial.</u> Needs 10k pullup resistors on the I2C lines. Read the page very carefully.</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/942344178_orig.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/942344178.jpeg?1550901822" alt="Picture" style="width:345;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-background-34">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-34"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font color="#2a2a2a" size="5">
-                   <strong>
-                    Capacitive Touch Switch
-                   </strong>
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino
-                    </strong>
-                    <strong>
-                     library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://www.instructables.com/id/Tutorial-for-TTP223-Touch-Sensor-Module-Capacitive/" target="_blank">
-                    https://www.instructables.com/id/Tutorial-for-TTP223-Touch-Sensor-Module-Capacitive/
-                   </a>
-                  </span>
-                  <font color="#2a2a2a">
-                  </font>
-                  <br/>
-                  ​
-                  <br/>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/edited/198905397.jpeg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/198905397.jpeg?1550901827" style="width:276;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>Capacitive Touch Switch</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong> <strong>library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="http://www.instructables.com/id/Tutorial-for-TTP223-Touch-Sensor-Module-Capacitive/" target="_blank">http://www.instructables.com/id/Tutorial-for-TTP223-Touch-Sensor-Module-Capacitive/</a></span><font color="#2a2a2a"></font><br />&#8203;<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/198905397.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/198905397.jpeg?1550901827" alt="Picture" style="width:276;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-background-35">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-35"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font color="#2a2a2a" size="5">
-                   <strong>
-                    SD Card Reader
-                   </strong>
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino
-                    </strong>
-                    <strong>
-                     library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://www.arduino.cc/en/Reference/SDCardNotes" target="_blank">
-                    https://www.arduino.cc/en/Reference/SDCardNotes
-                   </a>
-                  </span>
-                  <br/>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/981042863_orig.jpg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/981042863.jpg?1550901831" style="width:311;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>SD Card Reader</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong>&nbsp;<strong>library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://www.arduino.cc/en/Reference/SDCardNotes" target="_blank">https://www.arduino.cc/en/Reference/SDCardNotes</a></span><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/981042863_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/981042863.jpg?1550901831" alt="Picture" style="width:311;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-background-36">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-background-36"  >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <h2 class="wsite-content-title">
-                  <font color="#2a2a2a" size="5">
-                   <strong>
-                    Water Sensor
-                   </strong>
-                  </font>
-                 </h2>
-                 <div class="paragraph">
-                  <font color="#2a2a2a">
-                   <font size="4">
-                    <strong>
-                     Arduino
-                    </strong>
-                    <strong>
-                     library
-                    </strong>
-                    :
-                   </font>
-                  </font>
-                  <span style="color:rgb(17, 85, 204)">
-                   <a href="https://www.tutorialspoint.com/arduino/arduino_water_detector_sensor.htm" target="_blank">
-                    https://www.tutorialspoint.com/arduino/arduino_water_detector_sensor.htm
-                   </a>
-                  </span>
-                  <br/>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                 <div>
-                  <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-                   <a href="uploads/1/0/1/7/101799490/edited/791389304.jpeg" onclick="if (!lightboxLoaded) return false" rel="lightbox">
-                    <img alt="Picture" src="uploads/1/0/1/7/101799490/published/791389304.jpeg?1550901834" style="width:420;max-width:100%"/>
-                   </a>
-                   <div style="display:block;font-size:90%">
-                   </div>
-                  </div>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title"><font color="#2a2a2a" size="5"><strong>Water Sensor</strong></font></h2>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4"><strong>Arduino</strong>&nbsp;<strong>library</strong>:&nbsp;</font></font><span style="color:rgb(17, 85, 204)"><a href="https://www.tutorialspoint.com/arduino/arduino_water_detector_sensor.htm" target="_blank">https://www.tutorialspoint.com/arduino/arduino_water_detector_sensor.htm</a></span><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/1/0/1/7/101799490/edited/791389304.jpeg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/1/0/1/7/101799490/published/791389304.jpeg?1550901834" alt="Picture" style="width:420;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-     <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-88" style="background-color: #202020;background-image: none;is_customized: 1;">
-       <div class="wsite-section-content">
+
+	</div>
+</div>
+<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-background-88" style="background-color: #202020;background-image: none;is_customized: 1;" >
+		<div class="wsite-section-content">
         <div class="container">
-         <div class="wsite-section-elements">
-          <h2 class="wsite-content-title" style="text-align:left;">
-           <font color="#a1a1a1">
-            Purchase your ticket
-           </font>
-          </h2>
-          <div>
-           <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-             <table class="wsite-multicol-table">
-              <tbody class="wsite-multicol-tbody">
-               <tr class="wsite-multicol-tr">
-                <td class="wsite-multicol-col" style="width:28.894427536992%; padding:0 15px;">
-                 <div class="paragraph">
-                  <font color="#818181">
-                   ​
-                   <br/>
-                   Early Bird Price (only during O-Week)
-                   <br/>
-                   Normal Price
-                   <br/>
-                   ​
-                   <br/>
-                   Members of MECC and SMEE will get an
-                   <strong>
-                    additional $5 discount.
-                   </strong>
-                   <br/>
-                   <br/>
-                   ​
-                  </font>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:18.354321894567%; padding:0 15px;">
-                 <div class="paragraph">
-                  <br/>
-                  <span style="color:rgb(129, 129, 129)">
-                   $25
-                   <br/>
-                   ​$30
-                  </span>
-                  <br/>
-                 </div>
-                </td>
-                <td class="wsite-multicol-col" style="width:52.75125056844%; padding:0 15px;">
-                 <div class="paragraph" style="text-align:left;">
-                  <br/>
-                  <font color="#a1a1a1">
-                   ​
-                  </font>
-                  <font color="#818181">
-                   Limited spots available!
-                   <br/>
-                   Teams must have 4 - 6 team members.
-                   <br/>
-                   <a href="rules.html">
-                    ​Read the rules
-                   </a>
-                   before purchasing to avoid complications!
-                  </font>
-                  <br/>
-                  <br/>
-                 </div>
-                </td>
-               </tr>
-              </tbody>
-             </table>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
+			<div class="wsite-section-elements">
+				<h2 class="wsite-content-title" style="text-align:left;"><font color="#a1a1a1">Purchase your ticket</font></h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:28.894427536992%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font color="#818181">&#8203;<br />Early Bird Price (only during O-Week)&nbsp; &nbsp;<br />Normal Price&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />&#8203;<br />Members of MECC and SMEE will get an <strong>additional $5 discount.</strong><br /><br />&#8203;</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:18.354321894567%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><br /><span style="color:rgb(129, 129, 129)">$25<br />&#8203;$30</span><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:52.75125056844%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:left;"><br /><font color="#a1a1a1">&#8203;</font><font color="#818181">Limited spots available!<br />Teams must have 4 - 6 team members.<br /><a href="rules.html">&#8203;Read the rules</a> before purchasing to avoid complications!</font><br /><br /></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+			</div>
+		</div>
       </div>
-     </div>
-    </div>
-   </div>
-   <!-- end content-wrap -->
-   <!-- end footer-wrap -->
+
+	</div>
+</div>
+
+</div>
+
+    </div><!-- end content-wrap -->
+
+    <div class="footer-wrap">
+      <div class="container">
+            <div class="footer">Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a></div>
+      </div><!-- end container -->
+    </div><!-- end footer-wrap -->
   </div>
-  <div class="nav mobile-nav">
-   <ul class="wsite-menu-default">
-    <li class="wsite-menu-item-wrap " id="pg980729199903201996">
-     <a class="wsite-menu-item" href="index.html">
-      Home
-     </a>
-    </li>
-    <li class="wsite-menu-item-wrap " id="pg180778030686805773">
-     <a class="wsite-menu-item" href="details.html">
-      Details
-     </a>
-    </li>
-    <li class="wsite-menu-item-wrap " id="active">
-     <a class="wsite-menu-item" href="components.html">
-      Components
-     </a>
-    </li>
-    <li class="wsite-menu-item-wrap " id="pg558157107831467310">
-     <a class="wsite-menu-item" href="rules.html">
-      Rules
-     </a>
-    </li>
-    <li class="wsite-menu-item-wrap " id="pg512481355700656421">
-     <a class="wsite-menu-item" href="2018-projects.html">
-      2018 Projects
-     </a>
-    </li>
-    <li class="wsite-menu-item-wrap " id="pg766801339173964871">
-     <a class="wsite-menu-item" href="faq.html">
-      FAQ
-     </a>
-    </li>
-    <li class="wsite-menu-item-wrap " id="pg219636233715695400">
-     <a class="wsite-menu-item" href="about-us.html">
-      About Us
-     </a>
-    </li>
-    <li class="wsite-menu-item-wrap " id="pg461629139258069737">
-     <a class="wsite-menu-item" href="https://www.eventbrite.com.au/e/hardhack-2019-tickets-57270996091" target="_blank">
-      Buy Tickets
-     </a>
-    </li>
-   </ul>
-  </div>
-  <div class="mini-cart-overlay">
-  </div>
-  <script src="files/theme/plugins.js">
-  </script>
-  <script src="files/theme/jquery.pxuMenu.js">
-  </script>
-  <script src="files/theme/jquery.trend.js">
-  </script>
-  <script src="files/theme/jquery.revealer.js">
-  </script>
-  <script src="files/theme/custom-1.js">
-  </script>
-  <div id="customer-accounts-app">
-  </div>
-  <script src="https://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234">
-  </script>
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-117176866-1">
-  </script>
-  <script>
-   window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-117176866-1');
-  </script>
- </body>
+
+  <div class="nav mobile-nav"><ul class="wsite-menu-default">
+		<li id="pg980729199903201996" class="wsite-menu-item-wrap ">
+		  <a
+		        href="index.html"
+		      class="wsite-menu-item"
+		    >
+		    Home
+		  </a>
+		  
+		</li>
+		<li id="pg180778030686805773" class="wsite-menu-item-wrap ">
+		  <a
+		        href="details.html"
+		      class="wsite-menu-item"
+		    >
+		    Details
+		  </a>
+		  
+		</li>
+		<li id="active" class="wsite-menu-item-wrap ">
+		  <a
+		        href="components.html"
+		      class="wsite-menu-item"
+		    >
+		    Components
+		  </a>
+		  
+		</li>
+		<li id="pg558157107831467310" class="wsite-menu-item-wrap ">
+		  <a
+		        href="rules.html"
+		      class="wsite-menu-item"
+		    >
+		    Rules
+		  </a>
+		  
+		</li>
+		<li id="pg826011429284417961" class="wsite-menu-item-wrap ">
+		  <a
+		        href="2019-projects.html"
+		      class="wsite-menu-item"
+		    >
+		    2019 Projects
+		  </a>
+		  
+		</li>
+		<li id="pg512481355700656421" class="wsite-menu-item-wrap ">
+		  <a
+		        href="2018-projects.html"
+		      class="wsite-menu-item"
+		    >
+		    2018 Projects
+		  </a>
+		  
+		</li>
+		<li id="pg766801339173964871" class="wsite-menu-item-wrap ">
+		  <a
+		        href="faq.html"
+		      class="wsite-menu-item"
+		    >
+		    FAQ
+		  </a>
+		  
+		</li>
+		<li id="pg219636233715695400" class="wsite-menu-item-wrap ">
+		  <a
+		        href="about-us.html"
+		      class="wsite-menu-item"
+		    >
+		    About Us
+		  </a>
+		  
+		</li>
+</ul>
+</div>
+
+  <div class="mini-cart-overlay"></div>
+
+  <script src="files/theme/plugins.js"></script>
+  <script src="files/theme/jquery.pxuMenu.js"></script>
+  <script src="files/theme/jquery.trend.js"></script>
+  <script src="files/theme/jquery.revealer.js"></script>
+  <script src="files/theme/custom-1.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+
+		
+	</body>
 </html>

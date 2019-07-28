@@ -1,0 +1,79 @@
+{
+  "responsive": true,
+  "glyph-icons": true,
+  "enableEditorJS": true,
+  "description": "Edison is a minimalist theme that puts your content front and center. With a classic Monospace and Sans Serif typography pairing and a modern color palette, Edison lets you and your content determine the tone of your site. Edison is perfect for artists, photographers, architects, bloggers, and minimalists.",
+  "features": [
+    "responsive",
+    "navigation-fixed",
+    "boxed-width",
+    "css-buttons",
+    "social-icons",
+    "navigation-top",
+    "boxed-header"
+  ],
+  "custom-options": [
+    {
+      "name": "header",
+      "title": "Navigation",
+      "type": "dropdown",
+      "default": "sticky",
+      "is-body-class": true,
+      "choices": [
+        {
+          "value": "sticky",
+          "title": "Sticky"
+        },
+        {
+          "value": "sticky-up",
+          "title": "Hide"
+        },
+        {
+          "value": "static",
+          "title": "Static"
+        }
+      ]
+    },
+    {
+      "name": "banner-overlay",
+      "title": "Show banner overlay",
+      "type": "toggle",
+      "default": true,
+      "is-body-class": true,
+      "is-less-var": false
+    },
+    {
+      "name": "color-banner-overlay",
+      "title": "Banner overlay",
+      "type": "color",
+      "default": "#ffffff",
+      "is-body-class": false,
+      "is-less-var": true
+    }
+  ],
+  "color-support": {
+    "primary": "#262626"
+  },
+  "color-presets": [
+    {
+      "primary": "#262626",
+      "variation": "black"
+    },
+    {
+      "primary": "#ed5757",
+      "variation": "red"
+    },
+    {
+      "primary": "#6adb7e",
+      "variation": "green"
+    },
+    {
+      "primary": "#337ef9",
+      "variation": "blue"
+    },
+    {
+      "primary": "#f5a623",
+      "variation": "orange"
+    }
+  ]
+}
