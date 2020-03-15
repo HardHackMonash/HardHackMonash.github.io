@@ -3,6 +3,7 @@
 # Scraps weebly stuff from exported archive files
 
 from bs4 import BeautifulSoup
+from io import open # added to fix 'invalid keyword argument' on line 15 - Owen Brooks 2020
 import os
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))

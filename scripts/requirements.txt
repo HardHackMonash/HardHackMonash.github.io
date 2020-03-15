@@ -1,1 +1,2 @@
-BeautifulSoup
+python 2
+BeautifulSoup - Version 4
